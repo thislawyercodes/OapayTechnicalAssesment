@@ -57,6 +57,28 @@ Once the server is running, visit:
 http://127.0.0.1:8000/swagger/
 ```
 
+## How to Test
+### Running Unit Tests
+To run unit tests, execute the following command:
+```sh
+python manage.py test
+```
+For more verbose output:
+```sh
+python manage.py test -v 2
+```
+
+### Testing API Endpoints with cURL
+Create a customer:
+```sh
+curl -X POST http://127.0.0.1:8000/customers/ -H "Content-Type: application/json" -d '{"name": "John Doe", "email": "john@example.com"}'
+```
+
+Retrieve orders for a customer:
+```sh
+curl -X GET http://127.0.0.1:8000/customers/1/orders/
+```
+
 ## Limitations
 - **No Authentication**: Endpoints are not secured; any user can access them.
 - **No Pagination**: Large datasets may impact performance.
@@ -65,5 +87,3 @@ http://127.0.0.1:8000/swagger/
 ## Contributing
 Feel free to fork the repository and submit pull requests!
 
-## License
-MIT
