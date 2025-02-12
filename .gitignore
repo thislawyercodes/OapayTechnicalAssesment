@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+.env
+*.env
+
+# Django Migrations
+**/migrations/
+
+# Database
+*.sqlite3
+*.pyo
+
+# Logs
+logs/
+*.log
+
+# Static and Media Files
+staticfiles/
+media/
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+
+# MacOS
+.DS_Store
+
+# PostgreSQL
+*.pgsql
+*.dump
+
+# JWT Tokens
+jwt_secret.key
